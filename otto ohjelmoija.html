@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <title>Otto Ohjelmoija</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="otto ohjelmoija css.css" rel="stylesheet">
+    <script src='otto ohjelmoija js.js'></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+</head>
+
+<body class="w3-content" style="max-width:1350px">
+    <main>
+        <!-- 1. laatikko alku -->
+        <div class="w3-black w3-container w3-center w3-responsive" style="height:650px">
+            <div class="w3-padding-32">
+                <img src='logo2.png' class='w3-image' margin-top='200px' alt="logo">
+            </div>
+            <div class="w3-padding-8">
+                <a href="#me" class="w3-button w3-black w3-block w3-hover-yellow w3-padding-8">OTTO</a>
+                <a href="#work" class="w3-button w3-black w3-block w3-hover-grey w3-padding-8">PROJEKTI:
+                    VENTTI</a>
+                <a href="#work2" class="w3-button w3-black w3-block w3-hover-yellow w3-padding-8">PROJEKTI:
+                    LASKURI</a>
+                <a href="#robokoodi" class="w3-button w3-black w3-block w3-hover-grey w3-padding-8">KOKEILE
+                    KOODAUSTA</a>
+                <a href="#contact" class="w3-button w3-black w3-block w3-hover-yellow w3-padding-8"> OLE
+                    YHTEYDESSÄ</a>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Alkuun</button>
+
+        <!-- ESITTELY -->
+        <div class="w3-row w3-mobile">
+            <div class="w3-half w3-grey w3-center" style="height:650px" id="me">
+                <div class="w3-padding-64">
+                    <h1>Moi!</h1>
+                    <p class='marg'>
+                        Mulla on kokemusta ohjelmointityöstä 10 vuoden ajalta. Oon työskennellyt
+                        suurissa suomalaisissa digifirmoissa kehittäjän ja esimiehen roolissa. Koulutukseltani olen
+                        Tietojenkäsittelyn diplomi-insinööri, joka kävi suorittamassa harjoittelun piilaaksossa.
+                    </p>
+                    <p class='marg'>
+                        Oman yrityksen perustin vuonna 2015. Otto Ohjelmoija tarjoaa ketteriä ja helppoja digiratkaisuja
+                        yksityisille ja yrityksille. Ota rohkeasti yhteyttä, niin kehitetään digiratkaisut sun
+                        tarpeisiin, jotka ovat ajan hermolla.
+                        Olen koonnut näille sivuille näytteitä projekteistani, joista kerron mielelläni lisää myös
+                        kasvotusten.
+                        Sinun on myös mahdollista kokeilla koodausta itse robotin kanssa.
+                    </p>
+                    <p class='marg'>
+                        <strong>Otto Strand</strong>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="w3-half w3-white w3-container w3-mobile bgotto" style="height:650px">
+
+            </div>
+        </div>
+
+        <!-- VENTTI -->
+        <div class="w3-row w3-mobile">
+            <div class="w3-half w3-dark-grey w3-center" style="height:650px" id="work">
+                <div class="w3-padding-64">
+                    <h1>Projekti: Ventti</h1>
+                    <p class='marg'>Ventti on perinteinen korttipeli, jonka säännöistä on monia variaatioita.
+                        Tässä pelissä on noudatettu alla olevia sääntöjä.</p>
+                    <br /><br />
+                    <p class="iso">Pelin säännöt:</p>
+                    <p>Ässä on aina arvoltaan 1.</p>
+                    <p>Jos saat summaksi 21, voitat.</p>
+                    <p>Jos nostat viisi korttia ja summa on enintään 21, voitat.</p>
+                    <p>Jos jakaja nostaa viisi korttia vuorosi jälkeen, jakaja voittaa.</p>
+                    <p>Tasatilanteissa jakaja voittaa.</p>
+
+                    <p class="iso">Onnea!</p>
+                </div>
+            </div>
+
+            <div class="w3-half w3-grey w3-container w3-mobile" style="height:650px">
+                <div class="resp-ikkuna">
+                    <iframe class="resp-ventti" src="ventti.html" title="venttipeli"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- LASKURI -->
+        <div class="w3-row">
+            <div class="w3-half w3-yellow w3-center" style="height:630px" id="work2">
+                <div class="w3-padding-64">
+                    <h1>Projekti: Laskuri</h1>
+                    <p class="p-laskuri2"> Laskuri laskee sinulle summan, erotuksen, tulon ja jakojäännöksen sekä
+                        näyttää luvut pienimmästä suurimpaan. </p>
+                    <br />
+                    <br />
+                    <p class="p-laskuri3">" Matemaattis-loogisesti älykäs henkilö voi usein käsitellä suuriakin
+                        lukuja
+                        päässään. Tunnetuin esimerkki lienee Albert Einstein, joka suorastaan lumoutui laskemisesta
+                        ja
+                        matemaattisten mallien luomisesta."
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="w3-half w3-dark-grey w3-container" style="height:630px">
+                <div class="w3-padding-64 w3-center w3-responsive">
+                    <h1>Valitse luvut!</h1>
+                    <p class="marg">
+                        Valitse kaksi lukua väliltä 1-10.
+                    </p>
+                    <form name="luvut">
+                        <label for="l1">Luku 1:</label>
+                        <input type="number" min="1" max="10" name="l1" id="l1">
+                        <br></br>
+                        <label for="l2">Luku 2:</label>
+                        <input type="number" min="1" max="10" name="l2" id="l2">
+                        <br></br>
+                        <input type="button" class="w3-button w3-yellow w3-hover-grey" value=" Laske "
+                            onclick="Laske()">&nbsp;
+                        <input type="button" class="w3-button w3-yellow w3-hover-grey" value=" Tyhjennä "
+                            onclick="Tyhjenna()">
+                    </form>
+                    <p id="summadiv" class="p-laskuri"></p>
+                    <p id="erotusp" class="p-laskuri"></p>
+                    <p id="tulop" class="p-laskuri"></p>
+                    <p id="jakop" class="p-laskuri"></p>
+                    <p id="lukujonop" class="p-laskuri"></p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- ROBOTTI -->
+        <div class="w3-row" id="robokoodi">
+            <div class="w3-half w3-grey w3-container w3-center" style="height:630px">
+                <div class="w3-padding-64">
+
+                    <h1>Kokeile koodausta</h1>
+                    <p class="marg">Koodaa alla olevaan ikkunaan teksti <strong>robot.jump();</strong> ja saat robotin hyppimään.
+                        Koodaamalla
+                        <strong>robot.stop();</strong> saat robotin pysähtymään.</p>
+                    <form name="tanssita" class="keski2">
+                        <label for="koodi">Koodi:</label>
+                        <input type="text" name="koodi" placeholder="kirjoita oikea koodi" id="koodi" required>
+                        <br></br>
+                        <input type="button" class="w3-button w3-hover-dark-grey w3-yellow" value="Suorita koodi"
+                            onclick="Tarkista()">
+                        <br></br>
+                        <input type="button" class="w3-button w3-hover-dark-grey w3-yellow" value="Tyhjennä koodi"
+                            onclick="Uusi()">
+                    </form>
+
+
+                </div>
+            </div>
+            <div class="w3-half w3-yellow w3-container" style="height:630px">
+                <div class="w3-padding-64 w3-padding-large">
+                    <h1 class="w3-center">Robotti</h1>
+                    <p class="w3-center w3-padding-8">"Oikea koodi saa minut hyppimään!"</p>
+                    <p id="robotti" class="keski2">
+                        <img class="robot" src="robo1.png" alt="Robotti">
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- YHTEYSTIEDOT -->
+        <div class="w3-row" id="contact">
+            <div class="w3-half w3-dark-grey w3-container w3-center" style="height:630px">
+                <div class="w3-padding-64">
+
+                    <h1>Ole yhteydessä!</h1>
+                    <p>sähköpostilla:<br />
+                        otto@ohjelmoija.com </p>
+                    <p>puhelimitse: <br />
+                        044 151 5151</p>
+                    <p> tai piipahda kylään <br />
+                        Eerikinkatu 30A, Helsinki</p>
+                    <p>Voit myös jättää viestin oheisella lomakkeella.</p>
+
+                </div>
+            </div>
+            <div class="w3-half w3-grey w3-container" style="height:630px">
+                <div class="w3-padding-64 w3-padding-large">
+                    <h1 class="w3-center">Viesti</h1>
+                    <p class="w3-center">Jätä viesti niin olen yhteydessä sinuun mahdollisimman pian.</p>
+                    <form class="w3-container w3-card w3-padding-32 w3-white" action="/action_page.php" target="_blank">
+                        <div class="w3-section">
+                            <label for="name">Nimi</label>
+                            <input class="w3-input" style="width:100%;" type="text" required name="Nimi"
+                                placeholder="Minna Mainio" id="name">
+                        </div>
+                        <div class="w3-section">
+                            <label for="email">Sähköposti</label>
+                            <input class="w3-input" style="width:100%;" type="text" required name="Email"
+                                placeholder="minna@mainio.fi" id="email">
+                        </div>
+                        <div class="w3-section">
+                            <label for="message">Viesti</label>
+                            <input class="w3-input" style="width:100%;" type="text" required name="Viesti"
+                                placeholder="viesti" id="message">
+                        </div>
+                        <button type="submit" class="w3-button w3-black w3-right">Lähetä</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- Footer -->
+    <footer class="w3-container w3-black w3-padding-16 w3-center">
+        <p>Otto Ohjelmoija</p>
+        <p>Eerikinkatu 30A, Helsinki</p>
+        <p>044 151 5151</p>
+        <p>otto@ohjelmoija.com</p>
+    </footer>
+
+</body>
+
+</html>
