@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+	<title>Korttipakka</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<header></header>
+	<main>
+		<div class="game">
+			<h2>Jakajan käsi</h2>
+
+			<ul id="dealer-hand" class="hand">
+				<li id="j1" class="card c1">
+				</li>
+				<li id="j2" class="card c2">
+				</li>
+				<li id="j3" class="card c3">
+				</li>
+				<li id="j4" class="card c4">
+				</li>
+				<li id="j5" class="card c5">
+				</li>
+			</ul>
+
+			<h2>Pelaajan käsi</h2>
+
+			<ul id="player-hand" class="hand">
+				<li id="p1" class="card c1">
+				</li>
+				<li id="p2" class="card c2">
+				</li>
+				<li id="p3" class="card c3">
+				</li>
+				<li id="p4" class="card c4">
+				</li>
+				<li id="p5" class="card c5">
+				</li>
+			</ul>
+
+			<section id="controls">
+				<button onclick="nostakortti()">Nosta</button>
+				<button onclick="jaa()">Jää</button>
+			</section>
+		</div>
+
+	</main>
+
+	<div id="loppu">
+		<div id="overlay" class="hidden">
+			<div id="gameover"></div>
+			<br></br>
+			<button id="nollaa"></button>
+		</div>
+	</div>
+	<script src="peli.js"></script>
+</body>
+
+</html>
