@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lomaketarkistus</title>
+    <style>
+        .asettele {
+            text-align: left;
+            margin: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="asettele">
+
+        <h2>Lomaketarkistus</h2>
+
+        <form name="testilomake">
+            1.Etunimi: <input type="text" name="enimi">
+            <br \> <br \>
+            2.Sukunimi: <input type="text" name="snimi" id="sukun" onchange="vaihdaIsotKirjaimet()">
+            <br \> <br \>
+            Ikä:
+            <select name="ika">
+                <option value="valitse">valitse</option>
+                <option value="18-25">18-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-45">36-45</option>
+                <option value="46-55">46-55</option>
+            </select>
+            <br \> <br \>
+            3.Puhelin:<input type="tel" name="puh" maxlength="10">
+            <br \> <br \>
+            4.Anna huoneiston numero:<input type="number" name="huoneisto" min="1" max="10">
+            <br \>
+            <br \>
+            <input type="button" value="Lähetä" onclick="tarkista()">
+            <input type="button" name="nappi" value="Tyhjennä" onclick="tyhjenna()" onmouseover="hiiriOver(this)"
+                onmouseout="hiiriOut(this)">
+        </form>
+    </div>
+
+    <script>
+        function tarkista() {
+            var kohta1 = document.forms["testilomake"]["enimi"].value;
+            var kohta2 = document.forms["testilomake"]["snimi"].value;
+            var kohta3 = document.forms["testilomake"]["ika"].value;
+            var kohta4 = document.forms["testilomake"]["puh"].value;
+            var kohta5 = document.forms["testilomake"]["huoneisto"].value;
+
+            if (kohta1 == "") {
+                window.alert("Anna etunimi");
+                return false;
+
+            } if (kohta2 == "") {
+                window.alert("Anna sukunimi")
+                return false;
+
+            } if (kohta3 =="valitse") {
+                window.alert("Valitse ikä");
+                return false;
+
+            } if (kohta4 == "") {
+                window.alert("Anna puhelinnumero");
+                return false;
+
+            } if (kohta5 == "") {
+                window.alert("Valitse huoneiston numero valikosta");
+            }
+        }
+
+        function tyhjenna() {
+            var kohta1 = document.forms["testilomake"]["enimi"].value = "";
+            var kohta2 = document.forms["testilomake"]["snimi"].value = "";
+            var kohta3 = document.forms["testilomake"]["ika"].value = "valitse";
+            var kohta4 = document.forms["testilomake"]["puh"].value = "";
+            var kohta5 = document.forms["testilomake"]["huoneisto"].value = "";
+        }
+
+        function vaihdaIsotKirjaimet() {
+            var sukunimi = document.getElementById("sukun");
+            sukunimi.value = sukunimi.value.toUpperCase();
+        }
+        function hiiriOver(obj) { 
+            document.forms["testilomake"]["nappi"].value = "Oletko varma?";
+        }
+
+        function hiiriOut(obj) {
+            document.forms["testilomake"]["nappi"].value = "Tyhjennä";
+        }
+
+    </script>
+</body>
+
+</html>
